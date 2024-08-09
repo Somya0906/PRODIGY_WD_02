@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --primary-color: #f3eae5;
+    --text-dark: #000000;
+    --white: #ffffff;
+    --max-width: 1200px;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: rgba(205, 169, 124, 0.636);
+}
+
+header {
+    background: #7b3c3c;
+    color: #fff;
+   
+    
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #350505; 
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-toggle {
+    display: none;
+}
+.container1 {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 0;
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    gap: 2rem;
+    overflow: hidden;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  }
+  
+  .container__left {
+    padding-inline: 1rem;
+    text-align: center;
+  }
+  
+  .container__left h1 {
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    color: var(--text-dark);
+  }
+  
+   .btn {
+    padding: 1rem 2rem;
+    letter-spacing: 2px;
+    color: var(--white);
+    background-color: var(--text-dark);
+    border-radius: 5rem;
+    font-size: 1rem;
+  }
+  
+  .container__left .btn:hover {
+    color: var(--text-dark);
+    background-color: var(--primary-color);
+  }
+  
+  .container__right {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .container__right::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    transform-origin: left;
+    height: 80%;
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    z-index: -1;
+  
+    animation: show 0.75s 1.25s ease-in-out forwards;
+  }
+  
+  @keyframes show {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: calc(100% - 2rem);
+    }
+  }
+  
+  .images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tent-1 {
+    max-width: 300px;
+    transform: translateX(1rem);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tent-2 {
+    max-width: 180px;
+    transform: translateX(-1rem);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .content {
+    padding-block: 0 5rem;
+    padding-inline: 2rem;
+    text-align: center;
+  }
+  
+
+  .content p {
+    line-height: 1.75rem;
+    color: var(--text-dark);
+    font-size: 2rem;
+  }
+  
+
+  .courses-section {
+    background-color: var(--primary-color); 
+    padding: 5rem 0; 
+    color: var(--text-dark); 
+    text-align: center;
+
+}
+.c-heading{
+    font-size: 4rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 30px;
+}
+
+.courses-section h2 {
+    font-size: 3rem; 
+    margin-bottom: 2rem; 
+
+    color: var(--text-dark); }
+
+.courses-section1 {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap; }
+
+.course-item {
+    background-color:rgba(205, 169, 124, 0.636);
+    padding: 2rem; 
+    margin: 1rem; 
+    width: calc(33.333% - 2rem); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.course-item:hover {
+    transform: translateY(-5px);
+    text-align: center;
+
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+}
+.course-item h3 {
+    font-size: 3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 1rem; 
+    color: var(--text-dark); 
+}
+
+.course-item h4 {
+    margin-bottom: 2rem;
+    font-size: 1.9rem;
+
+    color: var(--text-dark); 
+}
+
+.course-item .btn {
+    padding: 0.75rem 1.5rem; 
+    background-color: var(--text-dark); 
+    color: var(--white); 
+    border-radius: 5rem; 
+    font-size: 1rem; 
+    text-decoration: none; 
+}
+
+.course-item .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--text-dark); 
+}
+
+.curriculum {
+    display: none; 
+    background-color: var(--primary-color); 
+    padding: 1.2rem; 
+    border-radius: 12px; 
+    margin-top: 3rem; 
+    font-size: 1.6rem;
+}
+.curriculum h4{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.curriculum li{
+    list-style: none;
+}
+.course-item:hover .curriculum {
+    display: block; /* Show curriculum on hover */
+}
+  
+
+
+
+#about{
+    background-color:rgba(205, 169, 124, 0.636);
+}
+
+.about-section {
+    font-size: 2.5rem;
+    padding : 10rem 0;
+    text-align: center;
+  }
+  .about-section p{
+    background-color: #91492356;
+    border: double;
+    border-radius: 20px;
+    font-size: 2.rem;
+    padding: 20px;
+
+  }
+  #hh{
+    font-size: 5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif
+
+  }
+
+.instructor-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    background-color: #f9f9f9; 
+    text-align: center;
+}
+
+.heading2 {
+    font-size: 3rem;
+    color: #582f0e; 
+    margin-bottom: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+#instructor{
+
+    background-image: url(./Picture4.jpg);
+}
+.instructor-content {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; 
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+.instructor {
+    
+    flex: 1 1 300px;
+    max-width: 400px;
+    background-color: #ffffff80; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instructor:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.inst {
+    width: 100%;
+    height: auto;
+    max-width: 250px; 
+    border-radius: 50%; 
+    margin-bottom: 20px;
+    border: 5px solid #582f0e; 
+}
+
+.instructor-info h3 {
+    font-size: 2.9rem;
+    margin-bottom: 10px;
+    color: #333; 
+}
+
+.instructor-info h4 {
+    font-size: 2rem;
+    color: #100b0b; 
+    line-height: 1.6;
+}
+#heading2{
+    font-size: 4rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#contact{
+    background-color: #895e3bc8; 
+    ;
+}
+.contact-section {
+    background-color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+#heading-contact{
+    font-size: 3rem;
+    color: #000000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.content-contact {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+button {
+    padding: 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.courses-section, .curriculum-section, .instructor-section, .contact-section, .about-section {
+    
+    background: #f9f9f9;
+
+    min-height: 100vh; 
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    box-sizing: border-box;
+}
+
+.courses-section h2, .about-section h2, .curriculum-section h2, .instructor-section h2, .contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+
+.courses-section .course-list {
+    display: flex
+}
+@media (max-width: 1200px) {
+    .container1 {
+        grid-template-columns: 1fr;
+    }
+
+    .container__right::before {
+        height: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        background-color: #350505;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    .nav-links.open {
+        height: 100vh;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .container1 {
+        padding: 3rem 0;
+    }
+
+    .container__left h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .tent-1, .tent-2 {
+        max-width: 40%;
+    }
+
+    .courses-section1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-item {
+        width: 80%;
+    }
+
+    .about-section {
+        padding: 5rem 0;
+    }
+
+    .instructor-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container__left h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .courses-section h2 {
+        font-size: 2rem;
+    }
+
+    .course-item h3 {
+        font-size: 2rem;
+    }
+
+    .course-item h4 {
+        font-size: 1.5rem;
+    }
+
+    .about-section {
+        font-size: 2rem;
+    }
+
+    .instructor-info h3 {
+        font-size: 2.5rem;
+    }
+
+    .instructor-info h4 {
+        font-size: 1.8rem;
+    }
+
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .content-contact {
+        padding: 0 1rem;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
